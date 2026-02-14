@@ -15,8 +15,7 @@ st.title("ML Assignment 2 - Model Evaluation App")
 
 @st.cache_resource
 def load_model(path):
-    with open(path, "rb") as file:
-        return joblib.load(path)
+    return joblib.load(path)
 
 uploaded_file = st.file_uploader("Upload Test CSV File", type=["csv"])
 
