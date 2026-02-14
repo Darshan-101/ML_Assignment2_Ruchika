@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pickle
+import joblib
 from sklearn.metrics import (
     accuracy_score,
     precision_score,
@@ -16,7 +16,7 @@ st.title("ML Assignment 2 - Model Evaluation App")
 @st.cache_resource
 def load_model(path):
     with open(path, "rb") as file:
-        return pickle.load(file)
+        return joblib.load(path)
 
 uploaded_file = st.file_uploader("Upload Test CSV File", type=["csv"])
 
