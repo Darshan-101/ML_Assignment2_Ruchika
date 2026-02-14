@@ -11,7 +11,7 @@ from sklearn.metrics import (
     classification_report
 )
 
-st.title("ML Assignment 2 - Model Evaluation App")
+st.title("ML Assignment 2 - Mobile Price Prediction App")
 
 @st.cache_resource
 def load_model(path):
