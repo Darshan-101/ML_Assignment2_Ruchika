@@ -1,23 +1,16 @@
 # ML\_Assignment2\_Ruchika
 
-
-
 \# a) Problem Statement
 
 Classification of mobile phones into different price categories using multiple machine learning classification models.
 
 
-
 \# b) Dataset Description
 
-\- Dataset: Mobile Price Classification Dataset
-
-\- Number of Features: 20
-
-\- Number of Instances: 2000
-
-\- Target Classes: 4 (Low, Medium, High, Very High)
-
+Dataset: Mobile Price Classification Dataset downloaded from Kaggle
+Number of Features: 20
+Number of Instances: 2000
+Target Classes: 4 (Low, Medium, High, Very High)
 
 
 \#c) Models Used
@@ -26,7 +19,7 @@ The following machine learning classification models were implemented and evalua
 
 Logistic Regression
 Decision Tree Classifier
-k-Nearest Neighbors (kNN)
+k-Nearest Neighbors (KNN)
 Naive Bayes
 Random Forest (Ensemble)
 XGBoost (Ensemble)
@@ -40,8 +33,6 @@ XGBoost (Ensemble)
 | Random Forest       |     0.88   | 0.976929 |    0.879614 |   0.88   |   0.879734 | 0.840049 |
 | XGBoost             |     0.935  | 0.994458 |    0.935487 |   0.935  |   0.934982 | 0.913501 |
 
-
-
 \# Observations
 
 Logistic Regression:Logistic Regression produced satisfactory results on the dataset. Since it is a linear classifier, it performs well when the relationship between features and target classes is approximately linear. However, its performance is limited when the dataset contains complex non-linear patterns.
@@ -53,6 +44,5 @@ XGBoost (Ensemble):XGBoost achieved the highest performance among all models. It
 
 
 \## Streamlit App
-
-(You will paste your live app link here after deployment)
+https://mlassignment2ruchika-eymavzhzwhyll7shztbrps.streamlit.app/#ml-assignment-2-mobile-price-prediction-app
 
