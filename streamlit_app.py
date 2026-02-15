@@ -28,6 +28,22 @@ if uploaded_file is not None:
     X = data.iloc[:, :-1]
     y = data.iloc[:, -1]
 
+    # Load feature names and scaler
+    feature_names = joblib.load("Model/feature_names.pkl")
+    scaler = joblib.load("Model/scaler.pkl")
+
+    # Align features
+    for col in X.columns:
+        if col not in feature_names:
+            X = X.drop(columns=[col])
+    for col in feature_names:
+        if col not in X.columns:
+            X[col] = 0
+    X = X[feature_names]
+
+    # Scale
+    X_scaled = scaler.transform(X)
+
     model_option = st.selectbox(
         "Select Model",
         [
@@ -53,7 +69,8 @@ if uploaded_file is not None:
     elif model_option == "XGBoost":
         model = load_model("Model/xgboost.pkl")
 
-    y_pred = model.predict(X)
+    #y_pred = model.predict(X)
+    y_pred = model.predict(X_scaled)
 
     st.subheader("Evaluation Metrics")
     st.write("Accuracy:", accuracy_score(y, y_pred))
