@@ -36,10 +36,15 @@ XGBoost (Ensemble)
 \# Observations
 
 Logistic Regression:Logistic Regression produced satisfactory results on the dataset. Since it is a linear classifier, it performs well when the relationship between features and target classes is approximately linear. However, its performance is limited when the dataset contains complex non-linear patterns.
+
 Decision Tree:The Decision Tree classifier was able to capture non-linear relationships in the dataset. However, it showed slightly lower generalization performance compared to ensemble models, possibly due to overfitting on the training data.
+
 k-Nearest Neighbors (kNN):The kNN classifier provided good classification accuracy by classifying samples based on similarity with neighboring data points. However, its performance depends heavily on feature scaling and the choice of k value.
+
 Naive Bayes:The Naive Bayes classifier showed comparatively lower performance among the implemented models. This may be due to its assumption that all features are independent, which is not always true in real-world datasets.
+
 Random Forest (Ensemble):Random Forest performed better than individual Decision Trees. By combining multiple trees using bagging, it reduces overfitting and improves overall stability and accuracy.
+
 XGBoost (Ensemble):XGBoost achieved the highest performance among all models. Its boosting mechanism builds trees sequentially to correct the errors of previous models. Additionally, it includes regularization techniques that help prevent overfitting and improve generalization.
 
 
